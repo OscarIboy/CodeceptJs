@@ -14,6 +14,7 @@ Scenario('Create a new Category and Product', async (I) => {
     I.amOnPage(CategoriesPage.url);
     I.waitForElement(CategoriesPage.newButton, 30);
     I.click(CategoriesPage.newButton);
+    I.waitForElement(CategoriesPage.saveCloseButton, 30);
     I.fillField(CategoriesPage.title, $categoryName);
     I.waitForElement(CategoriesPage.saveCloseButton, 30);
     I.click(CategoriesPage.saveCloseButton);
@@ -23,10 +24,12 @@ Scenario('Create a new Category and Product', async (I) => {
     I.amOnPage(ProductsPage.url);
     I.waitForElement(ProductsPage.newButton, 30);
     I.click(ProductsPage.newButton);
+    I.waitForElement(ProductsPage.saveCloseButton, 30);
     I.fillField('Name', $productName);
     I.fillField(ProductsPage.productSku, $productSku);
     I.fillField('price', $productPrice);
     I.selectOption('#jform_category_id', $categoryName);
+    I.waitForElement(ProductsPage.saveCloseButton, 30);
     I.click(ProductsPage.saveCloseButton);
     I.see(ProductsPage.saveSuccess);
 
