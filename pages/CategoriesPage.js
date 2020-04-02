@@ -8,4 +8,5 @@ module.exports = {
   saveCloseButton: "//button[contains(normalize-space(), 'Save & Close')]",
   saveSuccess: "Category successfully submitted.",
   deleteButton: "//button[contains(normalize-space(), 'Delete')]",
+  title: "#jform_name",
 }

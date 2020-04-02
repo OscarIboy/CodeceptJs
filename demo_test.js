@@ -14,7 +14,7 @@ Scenario('Create a new Category and Product', async (I) => {
     I.amOnPage(CategoriesPage.url);
     I.waitForElement(CategoriesPage.newButton, 30);
     I.click(CategoriesPage.newButton);
-    I.fillField('Title', $categoryName);
+    I.fillField(CategoriesPage.title, $categoryName);
     I.waitForElement(CategoriesPage.saveCloseButton, 30);
     I.click(CategoriesPage.saveCloseButton);
     I.see(CategoriesPage.saveSuccess);
